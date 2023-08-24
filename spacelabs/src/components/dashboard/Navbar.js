@@ -72,7 +72,17 @@ export default function DashboardNavbar() {
                   </a>
                 </li>
                 <li className="nk-menu-item">
-                  <a href="html/team-apply.html" className="nk-menu-link">
+                  <a
+                    href="#"
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/dashboard/team-apply") return;
+
+                      router.push("/dashboard/team-apply");
+                    }}
+                  >
                     <span className="nk-menu-icon">
                       <em
                         className="icon ni ni-plus-fill-c
@@ -83,7 +93,18 @@ export default function DashboardNavbar() {
                   </a>
                 </li>
                 <li className="nk-menu-item">
-                  <a href="html/team-apply.html" className="nk-menu-link">
+                  <a
+                    href="#"
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/dashboard/terms-of-service")
+                        return;
+
+                      router.push("/dashboard/terms-of-service");
+                    }}
+                  >
                     <span className="nk-menu-icon">
                       <em
                         className="icon ni ni-grid-fill
@@ -110,7 +131,17 @@ export default function DashboardNavbar() {
                           
                           */}
                 <li className="nk-menu-item">
-                  <a href="html/place-order.html" className="nk-menu-link">
+                  <a
+                    href="#"
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/dashboard/place-order") return;
+
+                      router.push("/dashboard/place-order");
+                    }}
+                  >
                     <span className="nk-menu-icon">
                       <em className="icon ni ni-offer-fill" />
                     </span>
@@ -140,7 +171,17 @@ export default function DashboardNavbar() {
                   </a>
                 </li>
                 <li className="nk-menu-item">
-                  <a href="html/faq.html" className="nk-menu-link">
+                  <a
+                    href="#"
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/dashboard/faq") return;
+
+                      router.push("/dashboard/faq");
+                    }}
+                  >
                     <span className="nk-menu-icon">
                       <em className="icon ni ni-help-fill" />
                     </span>

@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic'
-import Navbar from '../../src/components/dashboard/Navbar';
 
+const Navbar = dynamic(() => import('../../src/components/dashboard/Navbar'), { ssr: false })
 const DashboardWrap = dynamic(() => import('../../src/components/dashboard/Wrap'), { ssr: false })
 
 export default function Dashboard() {
