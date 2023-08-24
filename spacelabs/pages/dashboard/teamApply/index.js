@@ -6,6 +6,7 @@ export default function TeamApply() {
 
     return (
         <>
+        
         <div className="nk-app-root">
             <div className="nk-main">
 
