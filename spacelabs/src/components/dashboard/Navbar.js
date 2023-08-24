@@ -172,14 +172,14 @@ export default function DashboardNavbar() {
                 </li>
                 <li className="nk-menu-item">
                   <a
-                    href="/dashboard/faq"
+                    href="#"
                     className="nk-menu-link"
                     onClick={(e) => {
-                      // e.preventDefault();
+                      e.preventDefault();
 
-                      // if (router.pathname == "/dashboard/faq") return;
+                      if (router.pathname == "/dashboard/faq") return;
 
-                      // router.push("/dashboard/faq");
+                      router.push("/dashboard/faq");
                     }}
                   >
                     <span className="nk-menu-icon">
