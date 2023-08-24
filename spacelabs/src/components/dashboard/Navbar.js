@@ -54,8 +54,9 @@ export default function DashboardNavbar() {
                 <li className="nk-menu-heading">
                   <h6 className="overline-title text-primary-alt">Dashboard</h6>
                 </li>
-                <li href="#" className="nk-menu-item">
+                <li className="nk-menu-item">
                   <a
+                    href="#"
                     className="nk-menu-link"
                     onClick={(e) => {
                       e.preventDefault();
