@@ -2,9 +2,9 @@ import dynamic from 'next/dynamic';
 
 import DashboardNavbar from "../../../src/components/dashboard/Navbar";
 
-const PlaceOrderWrap = dynamic(() => import('../../../src/components/dashboard/place-order/Wrap'), { ssr: false })
+const FaqWrap = dynamic(() => import('../../../src/components/dashboard/faq/Wrap'), { ssr: false })
 
-export default function PlaceOrder() {
+export default function Faq() {
 
     return(
         <>
@@ -12,7 +12,7 @@ export default function PlaceOrder() {
             <div className="nk-main">
 
                 <DashboardNavbar />
-                <PlaceOrderWrap />
+                <FaqWrap />
 
             </div>
         </div>
