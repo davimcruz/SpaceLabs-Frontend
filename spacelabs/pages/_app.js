@@ -1,6 +1,8 @@
+
+import "../public/assets/css/theme.css"
 import "../public/assets/css/spacelabs.css"
 import "../public/assets/css/spacelabs.min.css"
-import "../public/assets/css/theme.css"
+import "../public/assets/css/spacelabs.rtl.css"
 
 import Head from 'next/head'
 import IndexJS from "../src/app";
