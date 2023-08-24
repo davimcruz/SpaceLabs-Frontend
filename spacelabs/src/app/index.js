@@ -5,7 +5,7 @@ export default function Index() {
 
     useEffect(() => {
 
-        $("body").addClass("nk-body bg-lighter npc-general");
+        $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
     });
 
