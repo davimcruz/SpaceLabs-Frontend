@@ -1,4 +1,8 @@
+import { useRouter } from "next/router";
+
 export default function DashboardNavbar() {
+  const router = useRouter();
+
   return (
     <>
       <div
@@ -23,7 +27,17 @@ export default function DashboardNavbar() {
             </a>
           </div>
           <div className="nk-sidebar-brand">
-            <a href="html/index.html" className="logo-link nk-sidebar-logo">
+            <a
+              href="#"
+              className="logo-link nk-sidebar-logo"
+              onClick={(e) => {
+                e.preventDefault();
+
+                if (router.pathname == "/") return;
+
+                router.push("/");
+              }}
+            >
               <img
                 className="logo-light logo-img"
                 src="/assets/images/spacelabs.png"
@@ -40,8 +54,17 @@ export default function DashboardNavbar() {
                 <li className="nk-menu-heading">
                   <h6 className="overline-title text-primary-alt">Dashboard</h6>
                 </li>
-                <li className="nk-menu-item">
-                  <a href="html/index.html" className="nk-menu-link">
+                <li href="#" className="nk-menu-item">
+                  <a
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/dashboard") return;
+
+                      router.push("/dashboard");
+                    }}
+                  >
                     <span className="nk-menu-icon">
                       <em className="icon ni ni-opt-alt-fill" />
                     </span>
@@ -49,22 +72,38 @@ export default function DashboardNavbar() {
                   </a>
                 </li>
                 <li className="nk-menu-item">
-                  <a href="html/team-apply.html" className="nk-menu-link">
+                  <a
+                    href="#"
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/team-apply") return;
+
+                      router.push("/team-apply");
+                    }}
+                  >
                     <span className="nk-menu-icon">
-                      <em
-                        className="icon ni ni-plus-fill-c
-                                      "
-                      />
+                      <em className="icon ni ni-plus-fill-c" />
                     </span>
                     <span className="nk-menu-text">Apply to the Team</span>
                   </a>
                 </li>
                 <li className="nk-menu-item">
-                  <a href="html/team-apply.html" className="nk-menu-link">
+                  <a
+                    href="#"
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/terms-of-service") return;
+
+                      router.push("/terms-of-service");
+                    }}
+                  >
                     <span className="nk-menu-icon">
                       <em
-                        className="icon ni ni-grid-fill
-                                      "
+                        className="icon ni ni-grid-fill"
                       />
                     </span>
                     <span className="nk-menu-text">Terms of Service</span>
