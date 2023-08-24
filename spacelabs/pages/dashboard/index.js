@@ -1,4 +1,4 @@
-import dynamic from 'next/dynamic'
+import dynamic from 'next/dynamic';
 
 const Navbar = dynamic(() => import('../../src/components/dashboard/Navbar'), { ssr: false })
 const DashboardWrap = dynamic(() => import('../../src/components/dashboard/Wrap'), { ssr: false })
