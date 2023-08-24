@@ -24,7 +24,7 @@ export default function FaqWrap() {
                       </h2>
                       <div className="nk-block-des">
                         <p className="lead">
-                          Didn't find the answer to your question? Please{" "}
+                          Didn&apos;t find the answer to your question? Please 
                           <a href="#">contact us</a> directly.
                         </p>
                       </div>
