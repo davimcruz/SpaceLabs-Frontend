@@ -1,6 +1,7 @@
 import "../public/assets/css/spacelabs.css"
 
 import Head from 'next/head'
+import Script from 'next/script';
 
 function MyApp({ Component, pageProps }) {
 
@@ -12,9 +13,9 @@ function MyApp({ Component, pageProps }) {
       <meta name="description" content="best platform"/>
       <link rel="shortcut icon" href="/assets/images/spacelabs.png"/>
       <title>SpaceLabs</title>
-      <script src="/assets/js/bundle.js?ver=3.1.0"></script>
-      <script src="/assets/js/scripts.js?ver=3.1.0"></script>
-      <script src="/assets/js/charts/gd-default.js?ver=3.1.0"></script>
+      <Script src="/assets/js/bundle.js?ver=3.1.0" />
+      <Script src="/assets/js/scripts.js?ver=3.1.0" />
+      <Script src="/assets/js/charts/gd-default.js?ver=3.1.0"/>
     </Head>
     <Component {...pageProps} />
     </>
