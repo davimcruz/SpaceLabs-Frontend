@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
-import Footer from './Footer';
 
 const Header = dynamic(() => import('./Header'), { ssr: false })
+const Footer = dynamic(() => import('./Footer'), { ssr: false })
 
 export default function DashboardWrap() {
   return (
