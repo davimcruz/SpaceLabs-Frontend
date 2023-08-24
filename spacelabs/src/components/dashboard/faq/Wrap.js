@@ -66,7 +66,6 @@ export default function FaqWrap() {
                             </div>
                           </div>
                         </div>
-                        {/* .accordion-item */}
                         <div className="accordion-item">
                           <a
                             href="#"
@@ -102,7 +101,6 @@ export default function FaqWrap() {
                             </div>
                           </div>
                         </div>
-                        {/* .accordion-item */}
                         <div className="accordion-item">
                           <a
                             href="#"
@@ -138,7 +136,6 @@ export default function FaqWrap() {
                             </div>
                           </div>
                         </div>
-                        {/* .accordion-item */}
                         <div className="accordion-item">
                           <a
                             href="#"
@@ -175,13 +172,10 @@ export default function FaqWrap() {
                             </div>
                           </div>
                         </div>
-                        {/* .accordion-item */}
                       </div>
-                      {/* .accordion */}
                     </div>
                   </div>
                 </div>
-                {/* .content-page */}
               </div>
             </div>
           </div>
