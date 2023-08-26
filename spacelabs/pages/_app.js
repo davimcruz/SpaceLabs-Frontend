@@ -14,8 +14,8 @@ function MyApp({ Component, pageProps }) {
 
   return (
     <>
-    
-    <meta name="author" content="SpaceLabs" />
+      <Head>
+        <meta name="author" content="SpaceLabs" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="best platform" />
         <link rel="shortcut icon" href="/assets/images/spacelabs.png" />
         <title>SpaceLabs</title>
-        <script
+        {/* <script
           src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0"
           async
         />
@@ -38,7 +38,7 @@ function MyApp({ Component, pageProps }) {
         <script
           src="https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
           async
-        />
+        /> */}
       </Head>
       <Component {...pageProps} />
     </>
