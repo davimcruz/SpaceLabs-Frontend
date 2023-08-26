@@ -32,8 +32,8 @@ export default function Index() {
 
     document.body.appendChild(bundle);
     document.body.appendChild(scripts);
-    document.body.appendChild(script);
-    document.body.appendChild(script);
+    document.body.appendChild(gdDefault);
+    document.body.appendChild(messages);
 
     return () => {
       document.body.removeChild(bundle);
