@@ -118,7 +118,7 @@ export default function PaymentWrap() {
                               className="user-avatar sm"
                               style={{ background: "none" }}
                             >
-                              <img src="./images/purple.png" />
+                              <img src="/assets/images/purple.png" />
                             </div>
                             <div className="user-name">
                               <h6>
