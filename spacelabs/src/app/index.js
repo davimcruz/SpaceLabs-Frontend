@@ -11,11 +11,7 @@ export default function Index() {
         script.src = url;
         script.async = true;
 
-        document.body.appendChild(script);
-
-        return () => {
-            document.body.removeChild(script);
-        };
+        $("body").append(script);
     }
 
     useEffect(() => {
