@@ -13,9 +13,6 @@ export default function Index() {
         $("body").addClass("nk-body bg-lighter npc-general dark-mode");
         
         loadScripts("https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0");
-        // loadScripts("https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0");
-        loadScripts("https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0");
-        loadScripts("https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0");
 
         const script = document.createElement('script');
 
@@ -23,6 +20,11 @@ export default function Index() {
         script.async = true;
 
         document.body.appendChild(script);
+
+        
+        // loadScripts("https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0");
+        loadScripts("https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0");
+        loadScripts("https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0");
 
         return () => {
             document.body.removeChild(script);
