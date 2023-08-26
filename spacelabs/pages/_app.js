@@ -2,9 +2,7 @@ import "../public/assets/css/theme.css";
 import "../public/assets/css/spacelabs.min.css";
 import "../public/assets/css/spacelabs.css";
 
-import scripts from  "../public/assets/js/scripts";
-
-import { useEffect } from "react";
+import Safe from "react-safe"
 
 import Head from "next/head";
 import Script from "next/script";
@@ -12,10 +10,6 @@ import IndexJS from "../src/app";
 
 function MyApp({ Component, pageProps }) {
   IndexJS();
-
-  useEffect(() => {
-    scripts();
-  })
 
   return (
     <>
@@ -30,15 +24,13 @@ function MyApp({ Component, pageProps }) {
         <title>SpaceLabs</title>
       </Head>
       <Component {...pageProps} />
-      <Script src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0" strategy="beforeInteractive" />
-      <Script src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0" strategy="beforeInteractive" />
-      <Script
+      <Safe.script src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0" />
+      <Safe.script src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0" />
+      <Safe.script
         src="https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0"
-        strategy="beforeInteractive"
       />
-      <Script
+      <Safe.script
         src="https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
-        strategy="beforeInteractive"
       />
     </>
   );
