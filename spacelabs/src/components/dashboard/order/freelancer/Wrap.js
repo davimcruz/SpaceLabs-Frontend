@@ -447,6 +447,125 @@ export default function FreelancerWrap() {
           </div>
         </div>
 
+        <div className="modal fade" tabIndex={-1} id="modalFreelancer">
+          <div className="modal-dialog modal-lg" role="document">
+            <div className="modal-content">
+              <a
+                href="#"
+                className="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <em className="icon ni ni-cross" />
+              </a>
+              <div className="modal-body modal-body-md">
+                <div className="nk-modal-head mb-3 mb-sm-5">
+                  <h4 className="title d-none d-lg-block">
+                    <span className="nk-h6-head">Selecting Freelancers</span>{" "}
+                    for Your Order
+                  </h4>
+                </div>
+                <div className="nk-tnx-details">
+                  <div className="nk-block-between flex-wrap g-3">
+                    <div className="nk-tnx-type">
+                      <div
+                        className="nk-tnx-type-icon"
+                        style={{ background: "none" }}
+                      >
+                        <img src="https://visage.surgeplay.com/head/512/853c80ef3c3749fdaa49938b674adae6?y=70" />
+                      </div>
+                      <div className="nk-tnx-type-text">
+                        <h5 className="title">
+                          Maciel
+                          <span
+                            className="badge badge-dim rounded-pill bg-outline-success"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="top"
+                            title="Freelancer Verified"
+                            style={{
+                              marginTop: "-0.38rem",
+                              marginRight: "-0.5rem",
+                            }}
+                          >
+                            <em className="icon ni ni-check" />
+                          </span>
+                        </h5>
+                        <span className="sub-text mt-n1">
+                          {" "}
+                          Freelancer since June 29, 2023.
+                        </span>
+                      </div>
+                    </div>
+                    <ul className="align-center flex-wrap gx-3">
+                      <li>
+                        <a
+                          href="#"
+                          className="btn btn-dim btn-sm btn-outline-light"
+                        >
+                          <em className="icon ni ni-menu-squared" />
+                          <span>View Portfolio</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="nk-modal-head mt-sm-5 mt-4 mb-4">
+                    <h5 className="title">Comment on your order</h5>
+                    <span className="sub-text mt-n1">
+                      I liked your request, my name is Maciel, I recently joined
+                      the SpaceLabs team but I have been working with
+                      Freelancing for over 4 years, I have the experience and
+                      ability to completely handle your request in the way you
+                      prefer.
+                    </span>
+                  </div>
+                  <div className="row gy-3">
+                    <div className="col-lg-6">
+                      <h6 className="title">All Reviews</h6>
+                      <span className="tb-lead">
+                        <em className="icon ni ni-star-fill text-warning" />
+                        <em className="icon ni ni-star-fill text-warning" />
+                        <em className="icon ni ni-star-fill text-warning" />
+                        <em className="icon ni ni-star-fill text-warning" />
+                        <em className="icon ni ni-star-fill text-warning" />
+                        <span className="nk-h6-head" style={{ fontSize: 14 }}>
+                          (234)
+                        </span>
+                      </span>
+                    </div>
+                    <div className="col-lg-6">
+                      <h6 className="title">Quotation</h6>
+                      <span
+                        className="tb-lead nk-h6-head"
+                        style={{ fontSize: 16 }}
+                      >
+                        $99.99
+                      </span>
+                    </div>
+                    <div className="col-lg-6">
+                      <h6 className="title">Completion Deadline</h6>
+                      <span className="tb-lead" style={{ fontSize: 16 }}>
+                        Maximum 2 weeks
+                      </span>
+                    </div>
+                    <div className="col-lg-6">
+                      <h6 className="title">Freelancer Availability</h6>
+                      <span className="tb-lead" style={{ fontSize: 16 }}>
+                        6 to 12 hours a day
+                      </span>
+                    </div>
+                  </div>
+                  {/* .row */}
+                </div>
+                {/* .nk-tnx-details */}
+              </div>
+              {/* .modal-body */}
+            </div>
+            {/* .modal-content */}
+          </div>
+          {/* .modal-dialog */}
+        </div>
+        {/* .modal */}
+
         <Footer />
       </div>
     </>
