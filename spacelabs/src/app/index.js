@@ -6,12 +6,7 @@ const router = useRouter();
 export default function Index() {
 
     function loadScripts(url) {
-        const script = document.createElement('script');
-
-        script.src = url;
-        script.async = true;
-
-        $("body").append(script);
+        $("body").append(`<script src=${url} async><script/>`);
     }
 
     useEffect(() => {
