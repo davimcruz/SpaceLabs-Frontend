@@ -22,15 +22,15 @@ function MyApp({ Component, pageProps }) {
         <title>SpaceLabs</title>
       </Head>
       <Component {...pageProps} />
-      <script src="/assets/js/bundle.js?ver=3.1.0" async />
-      <script src="/assets/js/scripts.js?ver=3.1.0" async />
+      <script src="/assets/js/bundle.js?ver=3.1.0" defer />
+      <script src="/assets/js/scripts.js?ver=3.1.0" defer />
       <script
         src="/assets/js/charts/gd-default.js?ver=3.1.0"
-        async
+        defer
       />
       <script
         src="/assets/js/apps/messages.js?ver=3.1.0"
-        async
+        defer
       />
     </>
   );
