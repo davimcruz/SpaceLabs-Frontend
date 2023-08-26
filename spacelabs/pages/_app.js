@@ -3,6 +3,7 @@ import "../public/assets/css/spacelabs.min.css";
 import "../public/assets/css/spacelabs.css";
 
 import Head from "next/head";
+import Script from "next/script";
 import IndexJS from "../src/app";
 
 function MyApp({ Component, pageProps }) {
@@ -21,15 +22,15 @@ function MyApp({ Component, pageProps }) {
         <title>SpaceLabs</title>
       </Head>
       <Component {...pageProps} />
-      <script src="/assets/js/bundle.js?ver=3.1.0" defer />
-      <script src="/assets/js/scripts.js?ver=3.1.0" defer />
-      <script
+      <Script src="/assets/js/bundle.js?ver=3.1.0" strategy="lazyOnload" />
+      <Script src="/assets/js/scripts.js?ver=3.1.0" strategy="lazyOnload" />
+      <Script
         src="/assets/js/charts/gd-default.js?ver=3.1.0"
-        defer
+        strategy="lazyOnload"
       />
-      <script
+      <Script
         src="/assets/js/apps/messages.js?ver=3.1.0"
-        defer
+        strategy="lazyOnload"
       />
     </>
   );

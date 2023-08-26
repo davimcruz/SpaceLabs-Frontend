@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@builder.io/partytown": "^0.8.0",
     "jquery": "^3.7.0",
     "next": "13.4.19",
     "react": "18.2.0",
