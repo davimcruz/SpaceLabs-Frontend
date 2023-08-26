@@ -22,15 +22,15 @@ function MyApp({ Component, pageProps }) {
         <title>SpaceLabs</title>
       </Head>
       <Component {...pageProps} />
-      <Script src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0" strategy="lazyOnload" />
-      <Script src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0" strategy="lazyOnload" />
+      <Script src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0" strategy="beforeInteractive" />
+      <Script src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0" strategy="beforeInteractive" />
       <Script
         src="https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0"
-        strategy="lazyOnload"
+        strategy="beforeInteractive"
       />
       <Script
         src="https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
-        strategy="lazyOnload"
+        strategy="beforeInteractive"
       />
     </>
   );
