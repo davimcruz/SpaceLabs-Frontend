@@ -15,6 +15,11 @@ export default function Index() {
   }
 
   useEffect(() => {
+    const onRouterChange = (newPath) => {
+      window.location.href = router.basePath + newPath;
+    };
+    router.events.on("routeChangeStart", onRouterChange);
+
     $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
     const bundle = loadScripts(
@@ -36,10 +41,11 @@ export default function Index() {
     // document.body.appendChild(messages);
 
     return () => {
+      router.events.off("routeChangeStart", onRouterChange);
       document.body.removeChild(scripts);
       document.body.removeChild(bundle);
-    //   document.body.removeChild(gdDefault);
-    //   document.body.removeChild(messages);
+      //   document.body.removeChild(gdDefault);
+      //   document.body.removeChild(messages);
     };
   }, [router]);
 }
