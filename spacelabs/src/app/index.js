@@ -1,10 +1,9 @@
 import $ from 'jquery';
 import {useEffect} from "react";
 import { useRouter } from "next/router";
-const router = useRouter();
 
 export default function Index() {
-
+    const router = useRouter();
     function loadScripts(url) {
         $("body").append(`<script src=${url} async><script/>`);
     }
