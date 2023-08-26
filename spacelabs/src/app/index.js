@@ -30,18 +30,19 @@ export default function Index() {
     const messages = loadScripts(
       "https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
     );
-    
-    document.body.appendChild(gdDefault);
-    document.body.appendChild(messages);
-    document.body.appendChild(bundle);
-    document.body.appendChild(scripts);
+
+    document.head.appendChild(bundle);
+    document.head.appendChild(gdDefault);
+    document.head.appendChild(messages);
+    document.head.appendChild(scripts);
 
     return () => {
 
-      document.body.removeChild(gdDefault);
-      document.body.removeChild(messages);
-      document.body.removeChild(bundle);
-      document.body.removeChild(scripts);
+      document.head.removeChild(bundle);
+      document.head.removeChild(gdDefault);
+      document.head.removeChild(messages);
+      document.head.removeChild(scripts);
+      
     };
   }, [router.events]);
 }
