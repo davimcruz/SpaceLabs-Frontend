@@ -97,7 +97,7 @@ export default function OrderWrap() {
                               className="user-avatar sm"
                               style={{ background: "none" }}
                             >
-                              <img src="./images/spacelabs.png" />
+                              <img src="/assets/images/spacelabs.png" />
                             </div>
                             <div className="user-name">
                               <h6>
@@ -121,7 +121,7 @@ export default function OrderWrap() {
                               no character limit.
                             </p>
                             <p className="text-muted">
-                              (When you are ready, click "continue step")
+                              (When you are ready, click &quot;continue step&quot;)
                             </p>
                           </div>
                         </div>
