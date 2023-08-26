@@ -24,13 +24,15 @@ function MyApp({ Component, pageProps }) {
         <title>SpaceLabs</title>
       </Head>
       <Component {...pageProps} />
-      <Safe.script src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0" />
-      <Safe.script src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0" />
+      <Safe.script src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0" async />
+      <Safe.script src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0" async />
       <Safe.script
         src="https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0"
+        async
       />
       <Safe.script
         src="https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
+        async
       />
     </>
   );
