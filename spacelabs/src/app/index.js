@@ -22,6 +22,6 @@ export default function Index() {
         loadScripts("https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0");
         loadScripts("https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0");
 
-    }, [router]);
+    });
 
 }
