@@ -9,7 +9,7 @@ export default function Index() {
     const script = document.createElement("script");
 
     script.src = url;
-    script.async = true;
+    script.defer = true;
 
     return script;
   }
