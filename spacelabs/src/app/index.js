@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 export default function Index() {
     const router = useRouter();
     function loadScripts(url) {
-        $("body").append(`<script src=${url} defer></script>`);
+        $("body").append(`<script src=${url} async></script>`);
     }
 
     useEffect(() => {
