@@ -32,14 +32,14 @@ export default function Index() {
 
     document.body.appendChild(bundle);
     document.body.appendChild(scripts);
-    document.body.appendChild(gdDefault);
-    document.body.appendChild(messages);
+    // document.body.appendChild(gdDefault);
+    // document.body.appendChild(messages);
 
     return () => {
       document.body.removeChild(bundle);
       document.body.removeChild(scripts);
-      document.body.removeChild(gdDefault);
-      document.body.removeChild(messages);
+    //   document.body.removeChild(gdDefault);
+    //   document.body.removeChild(messages);
     };
   }, [router]);
 }

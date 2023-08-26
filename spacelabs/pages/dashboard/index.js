@@ -25,7 +25,7 @@ export default function Dashboard() {
                   <li>
                     <a href="#" className="country-item">
                       <img
-                        src="../images/flags/"
+                        src="/assets/images/flags/arg.png"
                         alt=""
                         className="country-flag"
                       />
@@ -35,17 +35,7 @@ export default function Dashboard() {
                   <li>
                     <a href="#" className="country-item">
                       <img
-                        src="./images/flags/arg.png"
-                        alt=""
-                        className="country-flag"
-                      />
-                      <span className="country-name">Argentina</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="country-item">
-                      <img
-                        src="./images/flags/french.png"
+                        src="/assets/images/flags/french.png"
                         alt=""
                         className="country-flag"
                       />
@@ -55,7 +45,7 @@ export default function Dashboard() {
                   <li>
                     <a href="#" className="country-item">
                       <img
-                        src="./images/flags/portugal.png"
+                        src="/assets/images/flags/portugal.png"
                         alt=""
                         className="country-flag"
                       />
@@ -64,7 +54,7 @@ export default function Dashboard() {
                   </li>
                   <a href="#" className="country-item">
                     <img
-                      src="./images/flags/english.png"
+                      src="/assets/images/flags/english.png"
                       alt=""
                       className="country-flag"
                     />
