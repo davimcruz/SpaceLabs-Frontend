@@ -2,7 +2,7 @@ import $ from "jquery";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Index(pageProps) {
+export default function Index() {
   const router = useRouter();
 
   function loadScripts(url) {
@@ -33,15 +33,15 @@ export default function Index(pageProps) {
     
     document.body.appendChild(gdDefault);
     document.body.appendChild(messages);
-    document.body.appendChild(scripts);
     document.body.appendChild(bundle);
+    document.body.appendChild(scripts);
 
     return () => {
 
       document.body.removeChild(gdDefault);
       document.body.removeChild(messages);
-      document.body.removeChild(scripts);
       document.body.removeChild(bundle);
+      document.body.removeChild(scripts);
     };
-  }, [pageProps]);
+  }, [router.events]);
 }

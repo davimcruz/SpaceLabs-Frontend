@@ -9,7 +9,7 @@ import IndexJS from "../src/app";
 
 function MyApp({ Component, pageProps }) {
 
-  IndexJS(pageProps);
+  IndexJS();
 
   return (
     <>
