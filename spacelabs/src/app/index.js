@@ -1,35 +1,45 @@
-import $ from 'jquery';
-import {useEffect} from "react";
+import $ from "jquery";
+import { useEffect } from "react";
 import { useRouter } from "next/router";
 
 export default function Index() {
-    const router = useRouter();
-    function loadScripts(url) {
-        $("body").append(`<script src=${url} async></script>`);
-    }
+  const router = useRouter();
 
-    useEffect(() => {
+  function loadScripts(url) {
+    const script = document.createElement("script");
 
-        $("body").addClass("nk-body bg-lighter npc-general dark-mode");
-        
-        loadScripts("https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0");
+    script.src = url;
+    script.async = true;
 
-        const script = document.createElement('script');
+    return script;
+  }
 
-        script.src = 'https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0';
-        script.async = true;
+  useEffect(() => {
+    $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
-        document.body.appendChild(script);
+    const bundle = loadScripts(
+      "https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0"
+    );
+    const scripts = loadScripts(
+      "https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0"
+    );
+    const gdDefault = loadScripts(
+      "https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0"
+    );
+    const messages = loadScripts(
+      "https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
+    );
 
-        
-        // loadScripts("https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0");
-        loadScripts("https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0");
-        loadScripts("https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0");
+    document.body.appendChild(bundle);
+    document.body.appendChild(scripts);
+    document.body.appendChild(script);
+    document.body.appendChild(script);
 
-        return () => {
-            document.body.removeChild(script);
-        };
-
-    }, [router]);
-
+    return () => {
+      document.body.removeChild(bundle);
+      document.body.appendChild(scripts);
+      document.body.appendChild(gdDefault);
+      document.body.appendChild(messages);
+    };
+  }, [router]);
 }
