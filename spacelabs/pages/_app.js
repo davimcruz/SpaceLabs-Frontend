@@ -8,9 +8,8 @@ import Head from "next/head";
 import IndexJS from "../src/app";
 
 function MyApp({ Component, pageProps }) {
-  const router = useRouter();
 
-  IndexJS();
+  IndexJS(pageProps);
 
   return (
     <>

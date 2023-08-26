@@ -2,7 +2,7 @@ import $ from "jquery";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-export default function Index() {
+export default function Index(pageProps) {
   const router = useRouter();
 
   function loadScripts(url) {
@@ -30,17 +30,18 @@ export default function Index() {
     const messages = loadScripts(
       "https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
     );
-
+    
+    document.body.appendChild(gdDefault);
+    document.body.appendChild(messages);
     document.body.appendChild(scripts);
     document.body.appendChild(bundle);
-    // document.body.appendChild(gdDefault);
-    // document.body.appendChild(messages);
 
     return () => {
+
+      document.body.removeChild(gdDefault);
+      document.body.removeChild(messages);
       document.body.removeChild(scripts);
       document.body.removeChild(bundle);
-    //   document.body.removeChild(gdDefault);
-    //   document.body.removeChild(messages);
     };
-  });
+  }, [pageProps]);
 }
