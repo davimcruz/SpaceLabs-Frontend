@@ -19,10 +19,10 @@ function MyApp({ Component, pageProps }) {
       <meta name="description" content="best platform"/>
       <link rel="shortcut icon" href="/assets/images/spacelabs.png"/>
       <title>SpaceLabs</title>
-      <script src="/assets/js/bundle.js?ver=3.1.0" defer />
-      <script src="/assets/js/scripts.js?ver=3.1.0" defer />
-      <script src="/assets/js/charts/gd-default.js?ver=3.1.0" defer />
-      <script src="/assets/js/apps/messages.js?ver=3.1.0" defer />
+      <script src="/assets/js/bundle.js?ver=3.1.0" async />
+      <script src="/assets/js/scripts.js?ver=3.1.0" async />
+      <script src="/assets/js/charts/gd-default.js?ver=3.1.0" async />
+      <script src="/assets/js/apps/messages.js?ver=3.1.0" async />
 
     </Head>
     <Component {...pageProps} />
