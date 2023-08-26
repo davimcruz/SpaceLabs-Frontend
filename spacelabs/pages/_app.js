@@ -3,7 +3,6 @@ import "../public/assets/css/spacelabs.min.css";
 import "../public/assets/css/spacelabs.css";
 
 import Head from "next/head";
-import Script from "next/script";
 import IndexJS from "../src/app";
 
 function MyApp({ Component, pageProps }) {
