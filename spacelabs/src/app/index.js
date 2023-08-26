@@ -44,5 +44,5 @@ export default function Index() {
       document.head.removeChild(scripts);
       
     };
-  }, [router.events]);
+  }, [router]);
 }
