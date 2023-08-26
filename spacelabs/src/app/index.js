@@ -37,9 +37,9 @@ export default function Index() {
 
     return () => {
       document.body.removeChild(bundle);
-      document.body.appendChild(scripts);
-      document.body.appendChild(gdDefault);
-      document.body.appendChild(messages);
+      document.body.removeChild(scripts);
+      document.body.removeChild(gdDefault);
+      document.body.removeChild(messages);
     };
   }, [router]);
 }
