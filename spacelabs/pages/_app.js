@@ -2,12 +2,20 @@ import "../public/assets/css/theme.css";
 import "../public/assets/css/spacelabs.min.css";
 import "../public/assets/css/spacelabs.css";
 
+import scripts from  "../public/assets/js/scripts";
+
+import { useEffect } from "react";
+
 import Head from "next/head";
 import Script from "next/script";
 import IndexJS from "../src/app";
 
 function MyApp({ Component, pageProps }) {
   IndexJS();
+
+  useEffect(() => {
+    scripts();
+  })
 
   return (
     <>
