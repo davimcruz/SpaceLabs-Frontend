@@ -1,3 +1,5 @@
+import jQuery from "jquery";
+
 export default (function NioApp(i, w) {
     "use strict";
     var t = w(window),
