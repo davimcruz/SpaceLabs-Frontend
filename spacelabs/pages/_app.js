@@ -26,6 +26,7 @@ function MyApp({ Component, pageProps }) {
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="4cacbb56e603bf040218f90d-text/javascript"/>
         <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js" type="4cacbb56e603bf040218f90d-text/javascript"/>
         <script async src="https://code.jquery.com/jquery-3.6.0.js"/>
+        <script async src="/assets/js/bundle.js"/>
       </Head>
       <Component {...pageProps} />
     </LayoutScripts>
