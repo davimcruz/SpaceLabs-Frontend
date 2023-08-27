@@ -19,23 +19,23 @@ export default function DashboardNavbar() {
     <div className={`nk-sidebar nk-sidebar-fixed is-dark ${isNavbarOpen ? 'is-open' : ''}`}>
       <div className="nk-sidebar-element nk-sidebar-head">
         <div className="nk-menu-trigger">
-          <button
+          <a
             className="nk-nav-toggle nk-quick-nav-icon d-xl-none"
             data-target="sidebarMenu"
             onClick={toggleNavbar}
           >
             <em className="icon ni ni-arrow-left" />
-          </button>
-          <button
+          </a>
+          <a
             className="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex"
             data-target="sidebarMenu"
             onClick={toggleNavbar}
           >
             <em className="icon ni ni-menu" />
-          </button>
+          </a>
         </div>
         <div className="nk-sidebar-brand">
-          <button
+          <a
             className="logo-link nk-sidebar-logo"
             onClick={(e) => {
               e.preventDefault();
@@ -49,7 +49,7 @@ export default function DashboardNavbar() {
               alt="logo"
               style={{ marginLeft: '3.5rem' }}
             />
-          </button>
+          </a>
         </div>
       </div>
       <div className="nk-sidebar-element nk-sidebar-body">
@@ -60,7 +60,7 @@ export default function DashboardNavbar() {
                 <h6 className="overline-title text-primary-alt">Dashboard</h6>
               </li>
               <li className="nk-menu-item">
-                <button
+                <a
                   className="nk-menu-link"
                   onClick={() => handleNavigation('/dashboard')}
                 >
@@ -68,7 +68,7 @@ export default function DashboardNavbar() {
                     <em className="icon ni ni-opt-alt-fill" />
                   </span>
                   <span className="nk-menu-text">You Overview</span>
-                </button>
+                </a>
               </li>
                 <li className="nk-menu-item">
                   <a
