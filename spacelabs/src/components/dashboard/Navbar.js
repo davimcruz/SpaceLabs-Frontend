@@ -61,9 +61,9 @@ export default function DashboardNavbar() {
                     onClick={(e) => {
                       e.preventDefault();
 
-                      if (router.pathname == "/dashboard") return;
+                      if (router.pathname == "/dashboard/overview") return;
 
-                      router.push("/dashboard");
+                      router.push("/dashboard/overview");
                     }}
                   >
                     <span className="nk-menu-icon">
