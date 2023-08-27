@@ -11,8 +11,20 @@ export default function Index() {
     }
 
     $(function () {
+
       const body = $("body");
+
       body.addClass("nk-body bg-lighter npc-general dark-mode");
+
+      if(/Mobi|Android/i.test(navigator.userAgent)) {
+        body.on("ready", function(e) {
+            $(".nk-sidebar").addClass("nk-sidebar-mobile")
+        })
+      }
+
+      body.on("click", ".nk-nav-toggle", function(e) {
+        $(".nk-sidebar").toggleClass("toggle-active");
+      })
 
       body.on("click", ".nk-nav-compact", function (e) {
         e.preventDefault();
