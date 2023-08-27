@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-
+ 
 export default function DashboardNavbar() {
   const router = useRouter();
 
@@ -61,9 +61,9 @@ export default function DashboardNavbar() {
                     onClick={(e) => {
                       e.preventDefault();
 
-                      if (router.pathname == "/dashboard/overview") return;
+                      if (router.pathname == "/dashboard/overview/") return;
 
-                      router.push("/dashboard/overview");
+                      router.push("/dashboard/overview/");
                     }}
                   >
                     <span className="nk-menu-icon">
