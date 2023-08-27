@@ -287,7 +287,8 @@ export default function Index() {
             [].slice
               .call(document.querySelectorAll(e || '[data-bs-toggle="tooltip"]'))
               .map(function (e) {
-                return new bootstrap.Tooltip(e, a);
+                return null;
+                // return new bootstrap.Tooltip(e, a);
               });
         }),
         (i.BS.menutip = function (e) {
@@ -297,7 +298,8 @@ export default function Index() {
           [].slice
             .call(document.querySelectorAll(e || '[data-bs-toggle="popover"]'))
             .map(function (e) {
-              return new bootstrap.Popover(e);
+              return null
+              // return new bootstrap.Popover(e);
             });
         }),
         (i.BS.progress = function (e) {
