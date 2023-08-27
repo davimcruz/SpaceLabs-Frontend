@@ -5,6 +5,7 @@ import $ from "jquery";
 export default function Index() {
 
   useEffect(() => {
+    $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
     var $content = $("[data-content]"),
       $sidebar = $("." + "nk-sidebar"),
@@ -12,6 +13,7 @@ export default function Index() {
 
     $(".nk-nav-compact").on("click", function (e) {
       e.preventDefault();
+      alert("Funcionando")
       var $self = $(this),
         get_target = $self.data("target"),
         $self_content = $("[data-content=" + get_target + "]");
@@ -33,6 +35,6 @@ export default function Index() {
         $sidebar.removeClass("has-hover");
       }
     });
-    
+
   });
 }
