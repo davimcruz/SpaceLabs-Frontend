@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import LayoutScripts from '../../../src/components/layouts/scripts';
 
 const DashboardNavbar = dynamic(() => import('../../../src/components/dashboard/Navbar'), { ssr: false })
-const DashboardWrap = dynamic(() => import('../../../components/dashboard/Wrap'), { ssr: false })
+const DashboardWrap = dynamic(() => import('../../../src/components/dashboard/Wrap'), {ssr: false})
 
 export default function DashboardOverview() {
   return (
