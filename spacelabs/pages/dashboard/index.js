@@ -1,17 +1,21 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
 import LayoutScripts from '../../src/components/layouts/scripts';
 
-export default function Dashboard() {
-  const router = useRouter();
+export const getServerSideProps = ({req, res}) => {
+  return {
+    redirect: {
+        permanent: false,
+        destination: "/dashboard/overview"
+    },
+    props: {}
+  }
+}
 
-    useEffect(() => {
-      router.push('/dashboard/overview');
-    }, 
-  );
+export default function Dashboard() {
 
   return (
     <LayoutScripts>
     </LayoutScripts>
   );
 }
+
+
