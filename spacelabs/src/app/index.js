@@ -17,13 +17,15 @@ export default function Index() {
       body.addClass("nk-body bg-lighter npc-general dark-mode");
 
       if(/Mobi|Android/i.test(navigator.userAgent)) {
-        body.on("ready", function(e) {
+        body.ready(function(e) {
             $(".nk-sidebar").addClass("nk-sidebar-mobile")
+            console.log("mobile");
         })
       }
 
       body.on("click", ".nk-nav-toggle", function(e) {
         $(".nk-sidebar").toggleClass("toggle-active");
+        console.log("navtogle funcionando");
       })
 
       body.on("click", ".nk-nav-compact", function (e) {
