@@ -1567,8 +1567,8 @@ export default function Index() {
       NioApp.Select2.init();
       NioApp.Dropzone.init();
       NioApp.Slider.init();
-      NioApp.DataTable.init();
-      NioApp.Tagify.init();
+      // NioApp.DataTable.init();
+      // NioApp.Tagify.init();
     };
 
     // Toggler @v1
