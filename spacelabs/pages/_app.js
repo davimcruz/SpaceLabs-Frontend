@@ -26,9 +26,6 @@ function MyApp({ Component, pageProps }) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="4cacbb56e603bf040218f90d-text/javascript"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js" type="4cacbb56e603bf040218f90d-text/javascript"/>
         <script src="https://code.jquery.com/jquery-3.6.0.js"/>
-        <script src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0"/>
-        <script src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0"/>
-
       </Head>
       <Component {...pageProps} />
     </LayoutScripts>
