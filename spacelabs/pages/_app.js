@@ -23,22 +23,9 @@ function MyApp({ Component, pageProps }) {
         <meta name="description" content="best platform" />
         <link rel="shortcut icon" href="/assets/images/spacelabs.png" />
         <title>SpaceLabs</title>
-        {/* <script
-          src="https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0"
-          async
-        />
-        <script
-          src="https://spacelabs.vercel.app/assets/js/scripts.js?ver=3.1.0"
-          async
-        />
-        <script
-          src="https://spacelabs.vercel.app/assets/js/charts/gd-default.js?ver=3.1.0"
-          async
-        />
-        <script
-          src="https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
-          async
-        /> */}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" type="4cacbb56e603bf040218f90d-text/javascript"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js" type="4cacbb56e603bf040218f90d-text/javascript"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"/>
       </Head>
       <Component {...pageProps} />
     </LayoutScripts>
