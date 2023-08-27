@@ -1,8 +1,11 @@
-import { useHistory } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
 
-function Dashboard() {
-  const history = useHistory();
+export default function Dashboard() {
+  const router = useRouter();
 
-  history.push('/dashboard/overview');
-
+  useEffect(() => {
+    router.push('/dashboard/overview');
+    },
+  );
 }
