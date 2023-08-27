@@ -19,6 +19,10 @@ export default function Index() {
 
     $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
+    
+    const nioapp = loadScripts(
+      "https://spacelabs.vercel.app/vendors/js/nioapp.min.js?ver=3.1.0"
+    );
     const bundle = loadScripts(
       "https://spacelabs.vercel.app/assets/js/bundle.js?ver=3.1.0"
     );
@@ -32,6 +36,7 @@ export default function Index() {
       "https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
     );
 
+    document.body.appendChild(nioapp);
     document.body.appendChild(bundle);
     document.body.appendChild(scripts);
     document.body.appendChild(gdDefault);
@@ -39,6 +44,7 @@ export default function Index() {
 
     return () => {
 
+      document.body.removeChild(nioapp);
       document.body.removeChild(bundle);
       document.body.removeChild(scripts);
       document.body.removeChild(gdDefault);
