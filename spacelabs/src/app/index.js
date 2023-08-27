@@ -8,6 +8,7 @@ export default function Index() {
   function loadScripts(url) {
     const script = document.createElement("script");
 
+    script.type = "module";
     script.src = url;
     script.async = true;
 
@@ -31,17 +32,17 @@ export default function Index() {
       "https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
     );
 
-    document.head.appendChild(bundle);
-    document.head.appendChild(gdDefault);
-    document.head.appendChild(messages);
-    document.head.appendChild(scripts);
+    document.body.appendChild(bundle);
+    document.body.appendChild(scripts);
+    document.body.appendChild(gdDefault);
+    document.body.appendChild(messages);
 
     return () => {
 
-      document.head.removeChild(bundle);
-      document.head.removeChild(gdDefault);
-      document.head.removeChild(messages);
-      document.head.removeChild(scripts);
+      document.body.removeChild(bundle);
+      document.body.removeChild(scripts);
+      document.body.removeChild(gdDefault);
+      document.body.removeChild(messages);
       
     };
   }, [router.pathname]);
