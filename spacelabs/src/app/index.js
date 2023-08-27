@@ -16,10 +16,18 @@ export default function Index() {
   }
 
   useEffect(() => {
-
     $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
-    
+    const jqueryMin = loadScripts(
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    );
+
+    const jqueryLazyload = loadScripts(
+      "https://cdnjs.cloudflare.com/ajax/libs/jquery_lazyload/1.9.7/jquery.lazyload.min.js"
+    );
+
+    const codeJQuery = loadScripts("https://code.jquery.com/jquery-3.6.0.js");
+
     const nioapp = loadScripts(
       "https://spacelabs.vercel.app/vendors/js/nioapp.min.js?ver=3.1.0"
     );
@@ -36,6 +44,9 @@ export default function Index() {
       "https://spacelabs.vercel.app/assets/js/apps/messages.js?ver=3.1.0"
     );
 
+    document.body.appendChild(jqueryMin);
+    document.body.appendChild(jqueryLazyload);
+    document.body.appendChild(codeJQuery);
     document.body.appendChild(nioapp);
     document.body.appendChild(bundle);
     document.body.appendChild(scripts);
@@ -43,13 +54,14 @@ export default function Index() {
     document.body.appendChild(messages);
 
     return () => {
-
+      document.body.removeChild(jqueryMin);
+      document.body.removeChild(jqueryLazyload);
+      document.body.removeChild(codeJQuery);
       document.body.removeChild(nioapp);
       document.body.removeChild(bundle);
       document.body.removeChild(scripts);
       document.body.removeChild(gdDefault);
       document.body.removeChild(messages);
-      
     };
   }, [router.pathname]);
 }
