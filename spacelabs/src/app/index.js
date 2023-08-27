@@ -1,15 +1,15 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 
 import $ from "jquery";
 
 export default function Index() {
-  useEffect(() => {
+    useLayoutEffect(() => {
     $(function () {
       $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
       $("body").on("click", ".nk-nav-compact", function (e) {
         e.preventDefault();
-        alert("Funcionando");
+        console.log("Funcionando");
         var $self = $(this),
           get_target = $self.data("target"),
           $self_content = $("[data-content=" + get_target + "]");
