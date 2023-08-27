@@ -11,7 +11,7 @@ export default function DashboardNavbar() {
       const parts = value.split(`; ${name}=`)
       return parts.lenth === 2 ? parts.pop().split(";").shift() : null;
     }
-
+    console.log("Cookie: "+(getCookie("navbar") != null ? getCookie("navbar") : false))
     setIsNavbarCompact(getCookie("navbar") != null ? getCookie("navbar") : false);
   }, []);
 
