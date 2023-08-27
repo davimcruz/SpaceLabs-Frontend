@@ -1,17 +1,8 @@
-import { useEffect } from 'react';
-import { useRouter } from 'next/router';
-import LayoutScripts from '../../src/components/layouts/scripts';
+import { useHistory } from 'react-router-dom';
 
-export default function Dashboard() {
-  const router = useRouter();
+function Dashboard() {
+  const history = useHistory();
 
-    useEffect(() => {
-      router.push('/dashboard/overview');
-    }, 
-  );
+  history.push('/dashboard/overview');
 
-  return (
-    <LayoutScripts>
-    </LayoutScripts>
-  );
 }
