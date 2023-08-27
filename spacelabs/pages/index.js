@@ -19,7 +19,7 @@ export default function NotFound() {
                               className="btn btn-lg btn-primary btn-dim mt-2"
                               onClick={(e) => {
                                 e.preventDefault();
-                                router.push("/dashboard");
+                                router.push("/dashboard/overview");
                               }}
                             >
                               Back To Platform
