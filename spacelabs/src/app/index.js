@@ -48,8 +48,8 @@ export default function Index() {
     document.body.appendChild(jqueryLazyload);
     document.body.appendChild(codeJQuery);
     document.body.appendChild(nioapp);
-    document.body.appendChild(bundle);
     document.body.appendChild(scripts);
+    document.body.appendChild(bundle);
     document.body.appendChild(gdDefault);
     document.body.appendChild(messages);
 
@@ -58,8 +58,8 @@ export default function Index() {
       document.body.removeChild(jqueryLazyload);
       document.body.removeChild(codeJQuery);
       document.body.removeChild(nioapp);
-      document.body.removeChild(bundle);
       document.body.removeChild(scripts);
+      document.body.removeChild(bundle);
       document.body.removeChild(gdDefault);
       document.body.removeChild(messages);
     };
