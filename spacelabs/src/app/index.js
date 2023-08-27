@@ -21,8 +21,8 @@ export default function Index() {
       });
 
       $(".nk-sidebar-body").on("mouseenter", function (e) {
-        if ($sidebar.hasClass("is-compact")) {
-          $sidebar.addClass("has-hover");
+        if ($(".nk-sidebar").hasClass("is-compact")) {
+          $(".nk-sidebar").addClass("has-hover");
         }
       });
 
