@@ -53,60 +53,10 @@ export default function Index() {
 
     // Code Prettify @v1.0
     NioApp.Prettify = function () {
-      window.prettyPrint && prettyPrint();
     };
 
     // Copied @v1.0
     NioApp.Copied = function () {
-      var clip = ".clipboard-init",
-        target = ".clipboard-text",
-        sclass = "clipboard-success",
-        eclass = "clipboard-error";
-
-      // Feedback
-      function feedback(el, state) {
-        var $elm = $(el),
-          $elp = $elm.parent(),
-          copy = {
-            text: "Copy",
-            done: "Copied",
-            fail: "Failed",
-          },
-          data = {
-            text: $elm.data("clip-text"),
-            done: $elm.data("clip-success"),
-            fail: $elm.data("clip-error"),
-          };
-        copy.text = data.text ? data.text : copy.text;
-        copy.done = data.done ? data.done : copy.done;
-        copy.fail = data.fail ? data.fail : copy.fail;
-        var copytext = state === "success" ? copy.done : copy.fail,
-          addclass = state === "success" ? sclass : eclass;
-        $elp.addClass(addclass).find(target).html(copytext);
-        setTimeout(function () {
-          $elp
-            .removeClass(sclass + " " + eclass)
-            .find(target)
-            .html(copy.text)
-            .blur();
-          $elp.find("input").blur();
-        }, 2000);
-      }
-
-      // Init ClipboardJS
-      if (ClipboardJS.isSupported()) {
-        var clipboard = new ClipboardJS(clip);
-        clipboard
-          .on("success", function (e) {
-            feedback(e.trigger, "success");
-            e.clearSelection();
-          })
-          .on("error", function (e) {
-            feedback(e.trigger, "error");
-          });
-      } else {
-        $(clip).css("display", "none");
-      }
     };
 
     // CurrentLink Detect @v1.0
