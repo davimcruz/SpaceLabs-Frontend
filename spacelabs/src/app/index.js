@@ -5,53 +5,54 @@ import { useRouter } from "next/router";
 import useApp from "./NioApp";
 
 export default function Index() {
-  useEffect(() => {
-    
-    function NioAppFunc(e, t, s) {
-      var a = {
-          AppInfo: { name: "NioApp", version: "1.0.8", author: "Softnio" },
-          Package: { name: "spacelabs", version: "2.3" },
-        },
-        o = {
-          docReady: [],
-          docReadyDefer: [],
-          winLoad: [],
-          winLoadDefer: [],
-          onResize: [],
-          onResizeDefer: [],
-        };
-      function n(t) {
-        (t = void 0 === t ? e : t),
-          o.docReady.concat(o.docReadyDefer).forEach(function (e) {
-            null != e && e(t);
-          });
-      }
-      function i(t) {
-        (t = "object" == typeof t ? e : t),
-          o.winLoad.concat(o.winLoadDefer).forEach(function (e) {
-            null != e && e(t);
-          });
-      }
-      function r(t) {
-        (t = "object" == typeof t ? e : t),
-          o.onResize.concat(o.onResizeDefer).forEach(function (e) {
-            null != e && e(t);
-          });
-      }
-      return (
-        e(s).ready(n),
-        e(t).on("load", i),
-        e(t).on("resize", r),
-        (a.coms = o),
-        (a.docReady = n),
-        (a.winLoad = i),
-        (a.onResize = r),
-        a
-      );
+
+  function NioAppFunc(e, t, s) {
+
+    var a = {
+        AppInfo: { name: "NioApp", version: "1.0.8", author: "Softnio" },
+        Package: { name: "spacelabs", version: "2.3" },
+      },
+      o = {
+        docReady: [],
+        docReadyDefer: [],
+        winLoad: [],
+        winLoadDefer: [],
+        onResize: [],
+        onResizeDefer: [],
+      };
+    function n(t) {
+      (t = void 0 === t ? e : t),
+        o.docReady.concat(o.docReadyDefer).forEach(function (e) {
+          null != e && e(t);
+        });
     }
+    function i(t) {
+      (t = "object" == typeof t ? e : t),
+        o.winLoad.concat(o.winLoadDefer).forEach(function (e) {
+          null != e && e(t);
+        });
+    }
+    function r(t) {
+      (t = "object" == typeof t ? e : t),
+        o.onResize.concat(o.onResizeDefer).forEach(function (e) {
+          null != e && e(t);
+        });
+    }
+    return (
+      e(s).ready(n),
+      e(t).on("load", i),
+      e(t).on("resize", r),
+      (a.coms = o),
+      (a.docReady = n),
+      (a.winLoad = i),
+      (a.onResize = r),
+      a
+    );
+  }
 
-    const NioApp = useApp(NioAppFunc($, window, document), $);
+  const NioApp = useApp(NioAppFunc($, window, document), $);
 
+  useEffect(() => {
     $("body").addClass("nk-body bg-lighter npc-general dark-mode");
     NioApp.Package.name = "spacelabs";
     NioApp.Package.version = "2.3";
@@ -97,10 +98,12 @@ export default function Index() {
     };
 
     // Code Prettify @v1.0
-    NioApp.Prettify = function () {};
+    NioApp.Prettify = function () {
+    };
 
     // Copied @v1.0
-    NioApp.Copied = function () {};
+    NioApp.Copied = function () {
+    };
 
     // CurrentLink Detect @v1.0
     NioApp.CurrentLink = function () {
