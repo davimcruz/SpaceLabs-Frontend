@@ -1,9 +1,10 @@
 import { useRouter } from "next/router";
+import LayoutScripts from "../src/components/layouts/scripts";
 
 export default function NotFound() {
   const router = useRouter();
   return (
-    <>
+    <LayoutScripts>
       <div class="nk-app-root">
         <div class="nk-main ">
             <div class="nk-wrap nk-wrap-nosidebar">
@@ -29,6 +30,6 @@ export default function NotFound() {
             </div>
         </div>
     </div>
-    </>
+    </LayoutScripts>
   );
 }

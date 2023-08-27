@@ -3,6 +3,7 @@ import "../public/assets/css/spacelabs.min.css";
 import "../public/assets/css/spacelabs.css";
 
 import { useRouter } from "next/router";
+import LayoutScripts from "../src/components/layouts/scripts";
 
 import Head from "next/head";
 import IndexJS from "../src/app";
@@ -12,7 +13,7 @@ function MyApp({ Component, pageProps }) {
   IndexJS();
 
   return (
-    <>
+    <LayoutScripts>
       <Head>
         <meta name="author" content="SpaceLabs" />
         <meta
@@ -40,7 +41,7 @@ function MyApp({ Component, pageProps }) {
         /> */}
       </Head>
       <Component {...pageProps} />
-    </>
+    </LayoutScripts>
   );
 }
 

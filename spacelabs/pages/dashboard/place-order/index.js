@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import LayoutScripts from '../../../src/components/layouts/scripts';
 
 const DashboardNavbar = dynamic(() => import('../../../src/components/dashboard/Navbar'), { ssr: false })
 const PlaceOrderWrap = dynamic(() => import('../../../src/components/dashboard/place-order/Wrap'), { ssr: false })
@@ -6,7 +7,7 @@ const PlaceOrderWrap = dynamic(() => import('../../../src/components/dashboard/p
 export default function PlaceOrder() {
 
     return(
-        <>
+        <LayoutScripts>
         <div className="nk-app-root">
             <div className="nk-main">
 
@@ -15,7 +16,7 @@ export default function PlaceOrder() {
 
             </div>
         </div>
-        </>
+        </LayoutScripts>
     )
 
 }
