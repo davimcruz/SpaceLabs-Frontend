@@ -2,55 +2,59 @@ import { useRouter } from "next/router";
 
 export default function DashboardNavbar() {
   const router = useRouter();
+  const [isNavbarOpen, setIsNavbarOpen] = useState(false);
+
+  const toggleNavbar = () => {
+    setIsNavbarOpen(!isNavbarOpen);
+  };
+
+  const handleNavigation = (path) => {
+    setIsNavbarOpen(false); // Fechar a navbar ao navegar
+    router.push(path);
+  };
 
   return (
     <>
-      <div
-        className="nk-sidebar nk-sidebar-fixed is-dark "
-        data-content="sidebarMenu"
-      >
-        <div className="nk-sidebar-element nk-sidebar-head">
-          <div className="nk-menu-trigger">
-            <a
-              href="#"
-              className="nk-nav-toggle nk-quick-nav-icon d-xl-none"
-              data-target="sidebarMenu"
-            >
-              <em className="icon ni ni-arrow-left" />
-            </a>
-            <a
-              href="#"
-              className="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex"
-              data-target="sidebarMenu"
-            >
-              <em className="icon ni ni-menu" />
-            </a>
-          </div>
-          <div className="nk-sidebar-brand">
-            <a
-              href="#"
-              className="logo-link nk-sidebar-logo"
-              onClick={(e) => {
-                e.preventDefault();
-
-                if (router.pathname == "/") return;
-
-                router.push("/");
-              }}
-            >
-              <img
-                className="logo-light logo-img"
-                src="/assets/images/spacelabs.png"
-                alt="logo"
-                style={{ marginLeft: "3.5rem" }}
-              />
-            </a>
-          </div>
+    <div className={`nk-sidebar nk-sidebar-fixed is-dark ${isNavbarOpen ? 'is-open' : ''}`}>
+      <div className="nk-sidebar-element nk-sidebar-head">
+        <div className="nk-menu-trigger">
+          <button
+            className="nk-nav-toggle nk-quick-nav-icon d-xl-none"
+            data-target="sidebarMenu"
+            onClick={toggleNavbar}
+          >
+            <em className="icon ni ni-arrow-left" />
+          </button>
+          <button
+            className="nk-nav-compact nk-quick-nav-icon d-none d-xl-inline-flex"
+            data-target="sidebarMenu"
+            onClick={toggleNavbar}
+          >
+            <em className="icon ni ni-menu" />
+          </button>
         </div>
-        <div className="nk-sidebar-element nk-sidebar-body">
-          <div className="nk-sidebar-content">
-            <div className="nk-sidebar-menu" data-simplebar="">
-              <ul className="nk-menu">
+        <div className="nk-sidebar-brand">
+          <button
+            className="logo-link nk-sidebar-logo"
+            onClick={(e) => {
+              e.preventDefault();
+              if (router.pathname === '/') return;
+              handleNavigation('/');
+            }}
+          >
+            <img
+              className="logo-light logo-img"
+              src="/assets/images/spacelabs.png"
+              alt="logo"
+              style={{ marginLeft: '3.5rem' }}
+            />
+          </button>
+        </div>
+      </div>
+      <div className="nk-sidebar-element nk-sidebar-body">
+        <div className="nk-sidebar-content">
+          <div className="nk-sidebar-menu" data-simplebar="">
+            <ul className="nk-menu">
                 <li className="nk-menu-heading">
                   <h6 className="overline-title text-primary-alt">Dashboard</h6>
                 </li>
@@ -276,6 +280,7 @@ export default function DashboardNavbar() {
           </div>
         </div>
       </div>
+      
     </>
   );
 }
