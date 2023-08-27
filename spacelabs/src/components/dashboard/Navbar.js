@@ -3,7 +3,7 @@ import { useLayoutEffect, useState } from "react";
 
 export default function DashboardNavbar() {
   const router = useRouter();
-  const [isNavbarCompact, setIsNavbarCompact] = useState(false);
+  const [isNavbarCompact, setIsNavbarCompact] = useState("false");
 
   useLayoutEffect(() => {
     function getCookie(name) {
@@ -11,14 +11,15 @@ export default function DashboardNavbar() {
       const parts = value.split(`; ${name}=`)
       return parts.length === 2 ? parts.pop().split(";").shift() : null;
     }
-    console.log("Cookie: "+(getCookie("navbar") != null ? getCookie("navbar") : false))
-    setIsNavbarCompact(getCookie("navbar") != null ? getCookie("navbar") : false);
+    console.log("Cookie: "+(getCookie("navbar") != null ? getCookie("navbar") : "false"))
+    setIsNavbarCompact(getCookie("navbar") != null ? getCookie("navbar") : "false");
+    console.log(isNavbarCompact);
   }, []);
 
   return (
     <>
       <div
-        className={`nk-sidebar nk-sidebar-fixed is-dark ${isNavbarCompact ? `is-compact` : ``}`}
+        className={`nk-sidebar nk-sidebar-fixed is-dark ${isNavbarCompact === "true" ? `is-compact` : ``}`}
         data-content="sidebarMenu"
       >
         <div className="nk-sidebar-element nk-sidebar-head">
