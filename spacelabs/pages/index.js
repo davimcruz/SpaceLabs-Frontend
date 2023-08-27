@@ -13,7 +13,16 @@ export default function NotFound() {
                             <h2 class="nk-coming-head">Coming Soon!</h2>
                             <h3 class="nk-error-title">Enjoy the best, with the best.</h3>
                             <p class="nk-error-text">Experience something totally new and out of the ordinary. News soon, keep up with us!</p>
-                            <a href="html/index.html" class="btn btn-lg btn-dim btn-primary mt-2">Our Community</a>
+                            <a
+                              href="#"
+                              className="btn btn-lg btn-primary btn-dim mt-2"
+                              onClick={(e) => {
+                                e.preventDefault();
+                                router.push("/dashboard");
+                              }}
+                            >
+                              Back To Platform
+                            </a>
                         </div>
                     </div>
                 </div>
