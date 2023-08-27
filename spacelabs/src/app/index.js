@@ -11,22 +11,24 @@ export default function Index() {
     }
 
     $(function () {
-
       const body = $("body");
 
       body.addClass("nk-body bg-lighter npc-general dark-mode");
 
-      if(/Mobi|Android/i.test(navigator.userAgent)) {
-        body.ready(function(e) {
-            $(".nk-sidebar").addClass("nk-sidebar-mobile")
-            console.log("mobile");
-        })
+      if (/Mobi|Android/i.test(navigator.userAgent)) {
+        body.ready(function () {
+          $(".nk-sidebar").ready(function () {
+            $(this).addClass("nk-sidebar-mobile");
+          });
+        });
       }
 
-      body.on("click", ".nk-nav-toggle", function(e) {
+      body.on("click", ".nk-nav-toggle", function (e) {
+        $(".nk-sidebar").toggleClass("nk-sidebar-active");
         $(".nk-sidebar").toggleClass("toggle-active");
+        body.toggleClass("nav-shown")
         console.log("navtogle funcionando");
-      })
+      });
 
       body.on("click", ".nk-nav-compact", function (e) {
         e.preventDefault();
