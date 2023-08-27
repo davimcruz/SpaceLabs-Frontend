@@ -2,9 +2,56 @@ import $ from "jquery";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 
-import NioApp from "./NioApp";
+import useApp from "./NioApp";
 
 export default function Index() {
+  const NioApp = useApp
+    (
+      (NioApp = (function (e, t, s) {
+        "use strict";
+        var a = {
+            AppInfo: { name: "NioApp", version: "1.0.8", author: "Softnio" },
+            Package: { name: "spacelabs", version: "2.3" },
+          },
+          o = {
+            docReady: [],
+            docReadyDefer: [],
+            winLoad: [],
+            winLoadDefer: [],
+            onResize: [],
+            onResizeDefer: [],
+          };
+        function n(t) {
+          (t = void 0 === t ? e : t),
+            o.docReady.concat(o.docReadyDefer).forEach(function (e) {
+              null != e && e(t);
+            });
+        }
+        function i(t) {
+          (t = "object" == typeof t ? e : t),
+            o.winLoad.concat(o.winLoadDefer).forEach(function (e) {
+              null != e && e(t);
+            });
+        }
+        function r(t) {
+          (t = "object" == typeof t ? e : t),
+            o.onResize.concat(o.onResizeDefer).forEach(function (e) {
+              null != e && e(t);
+            });
+        }
+        return (
+          e(s).ready(n),
+          e(t).on("load", i),
+          e(t).on("resize", r),
+          (a.coms = o),
+          (a.docReady = n),
+          (a.winLoad = i),
+          (a.onResize = r),
+          a
+        );
+      })($, window, document)),
+      $
+  );
   useEffect(() => {
     $("body").addClass("nk-body bg-lighter npc-general dark-mode");
 
