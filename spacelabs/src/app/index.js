@@ -3,11 +3,13 @@ import { useEffect } from "react";
 import $ from "jquery";
 
 export default function Index() {
-    
+
   useEffect(() => {
+
     var $content = $("[data-content]"),
       $sidebar = $("." + "nk-sidebar"),
       $sidebar_body = $("." + "nk-sidebar" + "-body");
+
     $(".nk-nav-compact").on("click", function (e) {
       e.preventDefault();
       var $self = $(this),
@@ -19,15 +21,18 @@ export default function Index() {
         $self_content.removeClass("has-hover");
       }
     });
+
     $sidebar_body.on("mouseenter", function (e) {
       if ($sidebar.hasClass("is-compact")) {
         $sidebar.addClass("has-hover");
       }
     });
+
     $sidebar_body.on("mouseleave", function (e) {
       if ($sidebar.hasClass("is-compact")) {
         $sidebar.removeClass("has-hover");
       }
     });
+    
   });
 }
