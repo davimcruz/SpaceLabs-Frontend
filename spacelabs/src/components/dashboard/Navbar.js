@@ -1,12 +1,24 @@
 import { useRouter } from "next/router";
- 
+import { useLayoutEffect, useState } from "react";
+
 export default function DashboardNavbar() {
   const router = useRouter();
+  const [isNavbarCompact, setIsNavbarCompact] = useState(false);
+
+  useLayoutEffect(() => {
+    function getCookie(name) {
+      const value = `; ${document.cookie}`;
+      const parts = value.split(`; ${name}=`)
+      return parts.lenth === 2 ? parts.pop().split(";").shift() : null;
+    }
+
+    setIsNavbarCompact(getCookie("navbar") != null ? getCookie("navbar") : false);
+  }, []);
 
   return (
     <>
       <div
-        className="nk-sidebar nk-sidebar-fixed is-dark "
+        className={`nk-sidebar nk-sidebar-fixed is-dark ${isNavbarCompact ? `is-compact` : ``}`}
         data-content="sidebarMenu"
       >
         <div className="nk-sidebar-element nk-sidebar-head">
