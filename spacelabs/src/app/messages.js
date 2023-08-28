@@ -16,6 +16,7 @@ export default function Messages() {
       show_msg = "show-message";
 
     $(function () {
+        console.log($win.outerWidth())
       function msg_autohide() {
         if ($win.outerWidth() >= flat_break) {
           if (!$body.hasClass("msg-profile-autohide"))
