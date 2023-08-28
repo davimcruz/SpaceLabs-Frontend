@@ -8,11 +8,12 @@ import $ from "jquery";
 export default function Index() {
   const router = useRouter();
 
-  router.events.on("routeChangeComplete", () => {
-    if ($("body").hasClass("nav-shown")) $("body").addClass("has-hover");
-  });
-
   useEffect(() => {
+
+    router.events.on("routeChangeComplete", () => {
+      if ($("body").hasClass("nav-shown")) $("body").addClass("has-hover");
+    });
+
     $(window).on("load", function () {
       NProgress.start();
 
