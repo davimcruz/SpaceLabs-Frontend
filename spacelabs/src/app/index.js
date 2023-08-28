@@ -1,8 +1,22 @@
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useEffect } from "react";
+
+import NProgress from "nprogress";
 
 import $ from "jquery";
 
 export default function Index() {
+  useEffect(() => {
+    $(window).on("load", function () {
+      NProgress.start();
+
+      NProgress.configure({
+        template: `<div class="bar" role="bar"><div class="peg"></div></div>`,
+      });
+
+      NProgress.done();
+    });
+  }, []);
+
   useLayoutEffect(() => {
     function setCookie(isNavbarCompact) {
       const date = new Date();
@@ -18,7 +32,7 @@ export default function Index() {
       if (/Mobi|Android/i.test(navigator.userAgent)) {
         body.ready(function () {
           $(".nk-sidebar").ready(function () {
-            $(this).addClass("nk-sidebar-mobile");
+            $(".nk-sidebar").addClass("nk-sidebar-mobile");
           });
         });
       }
@@ -26,7 +40,7 @@ export default function Index() {
       body.on("click", ".nk-nav-toggle", function (e) {
         $(".nk-sidebar").toggleClass("nk-sidebar-active");
         $(".nk-sidebar").toggleClass("toggle-active");
-        body.toggleClass("nav-shown")
+        body.toggleClass("nav-shown");
         console.log("navtogle funcionando");
       });
 

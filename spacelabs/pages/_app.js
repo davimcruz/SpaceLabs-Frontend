@@ -1,12 +1,28 @@
+import "../styles/globals.scss"
+
 import "../public/assets/css/theme.css";
 import "../public/assets/css/spacelabs.min.css";
 import "../public/assets/css/spacelabs.css";
 
-import { useRouter } from "next/router";
 import LayoutScripts from "../src/components/layouts/scripts";
 
 import Head from "next/head";
 import IndexJS from "../src/app";
+
+import NProgress from "nprogress";
+import Router from "next/router";
+
+Router.events.on("routeChangeStart", (url) => {
+  NProgress.start();
+});
+
+NProgress.configure({
+  template: `<div class="bar" role="bar"><div class="peg"></div></div>`
+});
+
+Router.events.on("routeChangeComplete", () => NProgress.done());
+Router.events.on("routeChangeError", () => NProgress.done());
+
 
 function MyApp({ Component, pageProps }) {
 
