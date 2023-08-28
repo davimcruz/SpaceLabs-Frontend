@@ -128,7 +128,8 @@ export default function Messages() {
         } else {
           $(overlay).remove();
         }
-        $("body").on("click", overlay, function () {
+        $("body").on("click", overlay, function (e) {
+          e.preventDefault();
           $(this).remove();
           profile_hide(true);
           msg_autohide();
@@ -136,6 +137,7 @@ export default function Messages() {
       }
 
       $body.on("click", ".profile-toggle", function (e) {
+        e.preventDefault();
         $(".profile-toggle").toggleClass("active");
         $(".nk-msg-profile").toggleClass("visible");
         $(".nk-msg-body").toggleClass(shown_profile);
@@ -158,18 +160,18 @@ export default function Messages() {
           }
         }
         profile_overlay();
-        e.preventDefault();
       });
 
       $body.on("click", ".nk-msg-item", function (e) {
+        e.preventDefault();
         $(".nk-msg-item").removeClass("current");
         $(".nk-msg-aside").addClass(hide_aside);
         $(".nk-msg-body").addClass(show_msg);
         $(this).addClass("current");
-        e.preventDefault();
       });
 
-      $body.on("click", ".nk-msg-hide", function () {
+      $body.on("click", ".nk-msg-hide", function (e) {
+        e.preventDefault();
         $(".nk-msg-aside").removeClass(hide_aside);
         $(".nk-msg-body").removeClass(show_msg);
       });
