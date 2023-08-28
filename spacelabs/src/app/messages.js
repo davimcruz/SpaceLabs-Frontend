@@ -86,9 +86,8 @@ export default function Messages() {
         profile_overlay();
       });
 
-      router.events.on("routeChangeComplete", () => {
-        alert(router.pathname)
-        if (router.pathname.includes("/order")) {
+      router.events.on("routeChangeComplete", (url) => {
+        if (url.includes("/order")) {
           alert("aq")
           msg_on_resize();
           profile_overlay();
