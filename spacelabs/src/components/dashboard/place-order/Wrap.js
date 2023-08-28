@@ -41,7 +41,7 @@ export default function PlaceOrderWrap() {
                             <a href="html/order.html">
                               <img
                                 className="card-img-top"
-                                src="/public/assets/images/wallpapers/builder.jpg"
+                                src="/assets/images/wallpapers/builder.jpg"
                                 alt=""
                               />
                             </a>
@@ -93,7 +93,7 @@ export default function PlaceOrderWrap() {
                             <a href="html/order.html">
                               <img
                                 className="card-img-top"
-                                src="/public/assets/images/wallpapers/website.jpg"
+                                src="/assets/images/wallpapers/website.jpg"
                                 alt=""
                               />
                             </a>
@@ -141,7 +141,7 @@ export default function PlaceOrderWrap() {
                             <a href="html/order.html">
                               <img
                                 className="card-img-top"
-                                src="/public/assets/images/wallpapers/design.jpg"
+                                src="/assets/images/wallpapers/design.jpg"
                                 alt=""
                               />
                             </a>
@@ -189,7 +189,7 @@ export default function PlaceOrderWrap() {
                             <a href="html/order.html">
                               <img
                                 className="card-img-top"
-                                src="/public/assets/images/wallpapers/lunar.png"
+                                src="/assets/images/wallpapers/lunar.png"
                                 alt=""
                               />
                             </a>
