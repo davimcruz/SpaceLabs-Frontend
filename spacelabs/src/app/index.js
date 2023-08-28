@@ -46,8 +46,8 @@ export default function Index() {
 
       body.on("click", ".nk-msg-profile-toggle", function (e) {
         $(".nk-msg-profile-toggle").toggleClass("active");
-        $(".nk-msg-body").toggleClass("visible");
-        $(".nk-msg-profile").toggleClass("profile-shown");
+        $(".nk-msg-body").toggleClass("profile-shown");
+        $(".nk-msg-profile").toggleClass("visible");
 
       });
 
