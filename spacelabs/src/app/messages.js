@@ -176,5 +176,5 @@ export default function Messages() {
         $(".nk-msg-body").removeClass(show_msg);
       });
     });
-  });
+  }, []);
 }
