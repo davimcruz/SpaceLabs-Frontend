@@ -1,13 +1,18 @@
 import { useLayoutEffect, useEffect } from "react";
 
 import NProgress from "nprogress";
+import { useRouter } from "next/router";
 
 import $ from "jquery";
 
 export default function Index() {
+  const router = useRouter();
+
+  router.events.on("routeChangeComplete", () => {
+    if ($("body").hasClass("nav-shown")) $("body").addClass("has-hover");
+  });
 
   useEffect(() => {
-
     $(window).on("load", function () {
       NProgress.start();
 
@@ -17,7 +22,6 @@ export default function Index() {
 
       NProgress.done();
     });
-    
   }, []);
 
   useLayoutEffect(() => {
@@ -44,7 +48,6 @@ export default function Index() {
         $(".nk-sidebar").toggleClass("nk-sidebar-active");
         $(".nk-sidebar").toggleClass("toggle-active");
         body.toggleClass("nav-shown");
-        console.log("navtogle funcionando");
       });
 
       body.on("click", ".nk-nav-compact", function (e) {
