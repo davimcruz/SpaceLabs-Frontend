@@ -1,4 +1,4 @@
-import "../styles/globals.scss"
+import "../styles/globals.css"
 
 import "../public/assets/css/theme.css";
 import "../public/assets/css/spacelabs.min.css";
@@ -22,7 +22,6 @@ NProgress.configure({
 
 Router.events.on("routeChangeComplete", () => NProgress.done());
 Router.events.on("routeChangeError", () => NProgress.done());
-
 
 function MyApp({ Component, pageProps }) {
 

@@ -5,7 +5,9 @@ import NProgress from "nprogress";
 import $ from "jquery";
 
 export default function Index() {
+
   useEffect(() => {
+
     $(window).on("load", function () {
       NProgress.start();
 
@@ -15,6 +17,7 @@ export default function Index() {
 
       NProgress.done();
     });
+    
   }, []);
 
   useLayoutEffect(() => {
