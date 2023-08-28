@@ -198,7 +198,7 @@ export default function ManageUsers() {
                                                             <a href="html/user-details-regular.html">
                                                                 <div class="user-card">
                                                                     <div class="user-avatar" style="background: none; border-radius: none;">
-                                                                        <img src="https://visage.surgeplay.com/head/512/9e8a126dbbd245bababc988ca2893b99?y=70" style="border-radius: 0%;"/>
+                                                                        <img alt ="" src="https://visage.surgeplay.com/head/512/9e8a126dbbd245bababc988ca2893b99?y=70" style="border-radius: 0%;"/>
                                                                       
                     
                                                                     </div>
@@ -275,7 +275,7 @@ export default function ManageUsers() {
                                                             <a href="html/user-details-regular.html">
                                                                 <div class="user-card">
                                                                     <div class="user-avatar" style="background: none; border-radius: none;">
-                                                                        <img src="https://visage.surgeplay.com/head/192/61699b2ed3274a019f1e0ea8c3f06bc6?y=70" style="border-radius: 0%;"/>
+                                                                        <img alt="" src="https://visage.surgeplay.com/head/192/61699b2ed3274a019f1e0ea8c3f06bc6?y=70" style="border-radius: 0%;"/>
                                                                       
                     
                                                                     </div>
