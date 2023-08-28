@@ -1,4 +1,4 @@
-import LayoutScripts from "../../src/components/layouts/scripts";
+import LayoutScripts from "../src/components/layouts/scripts";
 
 function NotFoundPage() {
   return (
