@@ -266,6 +266,7 @@ export default function DashboardNavbar() {
 
                 <li className="nk-menu-item">
                   <a 
+                    href="#"
                     className="nk-menu-link"
                     onClick={(e) => {
                       e.preventDefault();
