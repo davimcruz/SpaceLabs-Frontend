@@ -11,7 +11,7 @@ export default function Index() {
   useEffect(() => {
 
     router.events.on("routeChangeComplete", () => {
-      if ($("body").hasClass("nav-shown")) $("body").addClass("has-hover");
+      if ($("body").hasClass("nav-shown")) $("body").removeClass("nav-shown");
     });
 
     $(window).on("load", function () {
