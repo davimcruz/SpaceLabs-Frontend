@@ -1,4 +1,3 @@
-import Image from "next/image";
 import LayoutScripts from "../../src/components/layouts/scripts";
 
 function NotFoundPage() {
@@ -10,7 +9,7 @@ function NotFoundPage() {
             <div className="nk-content ">
               <div className="nk-block nk-block-middle wide-md mx-auto">
                 <div className="nk-block-content nk-error-ld text-center">
-                  <Image
+                  <img
                     className="nk-error-gfx"
                     src="/assets/images/gfx/error-404.svg"
                     alt=""
