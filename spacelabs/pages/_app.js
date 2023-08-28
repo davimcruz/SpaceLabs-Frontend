@@ -7,7 +7,9 @@ import "../public/assets/css/spacelabs.css";
 import LayoutScripts from "../src/components/layouts/scripts";
 
 import Head from "next/head";
+
 import IndexJS from "../src/app";
+import MessagesJS from "../src/app/messages";
 
 import NProgress from "nprogress";
 import Router from "next/router";
@@ -26,6 +28,7 @@ Router.events.on("routeChangeError", () => NProgress.done());
 function MyApp({ Component, pageProps }) {
 
   IndexJS();
+  MessagesJS();
 
   return (
     <LayoutScripts>

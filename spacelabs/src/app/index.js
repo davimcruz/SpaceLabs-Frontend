@@ -44,13 +44,6 @@ export default function Index() {
         });
       }
 
-      body.on("click", ".nk-msg-profile-toggle", function (e) {
-        $(".nk-msg-profile-toggle").toggleClass("active");
-        $(".nk-msg-body").toggleClass("profile-shown");
-        $(".nk-msg-profile").toggleClass("visible");
-
-      });
-
       body.on("click", ".nk-nav-toggle", function (e) {
         $(".nk-sidebar").toggleClass("nk-sidebar-active");
         $(".nk-sidebar").toggleClass("toggle-active");
