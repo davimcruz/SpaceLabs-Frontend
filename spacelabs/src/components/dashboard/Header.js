@@ -26,22 +26,23 @@ const Header = () => {
           <div className="nk-header-news d-none d-xl-block">
             <div className="nk-news-list">
               <div className="nk-news-list">
-                <a className="nk-news-item">
+                <a className="nk-news-item" 
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                      if (router.pathname == "/dashboard/terms-of-service")
+                      return;
+
+                      router.push("/dashboard/terms-of-service");
+                  }}
+                >
                   <div className="nk-news-icon">
                     <em className="icon ni ni-quote-left" />
                   </div>
                   <div className="nk-news-text">
                     <h6 style={{ fontSize: 15 }}>
-                      Read the <span className="text-primary"
-                                  href="#"
-                                  onClick={(e) => {
-                                    e.preventDefault();
-                                      if (router.pathname == "/dashboard/terms-of-service")
-                                      return;
-                      
-                                        router.push("/dashboard/terms-of-service");
-                                    }}>Terms</span> 
-                      and avoid being punished by the team.
+                      Read the <span className="text-primary">Terms</span> and
+                      avoid being punished by the team.
                     </h6>
                   </div>
                 </a>
