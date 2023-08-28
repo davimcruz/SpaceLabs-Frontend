@@ -8,18 +8,24 @@ export default function DashboardNavbar() {
   useLayoutEffect(() => {
     function getCookie(name) {
       const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`)
+      const parts = value.split(`; ${name}=`);
       return parts.length === 2 ? parts.pop().split(";").shift() : null;
     }
-    console.log("Cookie: "+(getCookie("navbar") != null ? getCookie("navbar") : "false"))
-    setIsNavbarCompact(getCookie("navbar") != null ? getCookie("navbar") : "false");
+    console.log(
+      "Cookie: " + (getCookie("navbar") != null ? getCookie("navbar") : "false")
+    );
+    setIsNavbarCompact(
+      getCookie("navbar") != null ? getCookie("navbar") : "false"
+    );
     console.log(isNavbarCompact);
   }, []);
 
   return (
     <>
       <div
-        className={`nk-sidebar nk-sidebar-fixed is-dark ${isNavbarCompact === "true" ? `is-compact` : ``}`}
+        className={`nk-sidebar nk-sidebar-fixed is-dark ${
+          isNavbarCompact === "true" ? `is-compact` : ``
+        }`}
         data-content="sidebarMenu"
       >
         <div className="nk-sidebar-element nk-sidebar-head">
@@ -173,6 +179,7 @@ export default function DashboardNavbar() {
                     </span>
                   </a>
                 </li>
+
                 <li className="nk-menu-heading">
                   <h6 className="overline-title text-primary-alt">Others</h6>
                 </li>
@@ -184,6 +191,7 @@ export default function DashboardNavbar() {
                     <span className="nk-menu-text">Open a Ticket</span>
                   </a>
                 </li>
+
                 <li className="nk-menu-item">
                   <a
                     href="#"
@@ -202,25 +210,38 @@ export default function DashboardNavbar() {
                     <span className="nk-menu-text">Frequent Questions</span>
                   </a>
                 </li>
+
                 <li className="nk-menu-heading">
                   <h6 className="overline-title text-primary-alt">Explore</h6>
                 </li>
                 <li className="nk-menu-item">
-                  <a href="html/#" className="nk-menu-link">
+                  <a
+                  href="html/#" 
+                  className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/dashboard/updates") return;
+
+                      router.push("/dashboard/updates");
+                    }}
+                  >
+                  
                     <span className="nk-menu-icon">
                       <em className="icon ni ni-elementor" />
                     </span>
-                    <span className="nk-menu-text">
-                      Our updates{" "}
-                      <span
-                        className="badge badge-dim bg-primary"
-                        style={{ marginLeft: "0.3rem" }}
-                      >
+
+                    <span className="nk-menu-text"> Our updates{" "}
+
+                      <span className="badge badge-dim bg-primary"
+                        style={{ marginLeft: "0.3rem" }}>
+                      
                         <strong style={{ fontWeight: 800 }}>1.14.0</strong>
                       </span>
                     </span>
                   </a>
                 </li>
+
                 <li className="nk-menu-item">
                   <a
                     href="https://discord.gg/WQqcrDY8Up"
