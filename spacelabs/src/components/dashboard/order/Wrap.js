@@ -65,7 +65,7 @@ export default function OrderWrap() {
                           </li>
                         </ul>
                       </div>
-                      <a className="nk-msg-profile-toggle profile-toggle active">
+                      <a className="nk-msg-profile-toggle profile-toggle">
                         <em className="icon ni ni-arrow-left" />
                       </a>
                     </div>

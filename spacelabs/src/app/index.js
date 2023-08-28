@@ -9,7 +9,6 @@ export default function Index() {
   const router = useRouter();
 
   useEffect(() => {
-
     router.events.on("routeChangeComplete", () => {
       if ($("body").hasClass("nav-shown")) $("body").removeClass("nav-shown");
     });
@@ -44,6 +43,12 @@ export default function Index() {
           });
         });
       }
+
+      body.on("click", ".nk-profile-toggle", function (e) {
+        $(".nk-profile-toggle").toggleClass("active");
+        $(".nk-msg-profile").toggleClass("visible");
+
+      });
 
       body.on("click", ".nk-nav-toggle", function (e) {
         $(".nk-sidebar").toggleClass("nk-sidebar-active");
