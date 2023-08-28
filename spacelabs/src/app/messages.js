@@ -1,10 +1,13 @@
 import { useLayoutEffect, useEffect } from "react";
 
+import { useRouter } from "next/router";
+
 import $ from "jquery";
 
 export default function Messages() {
-  useEffect(() => {
+  const router = useRouter();
 
+  useEffect(() => {
     // Messages Variable
     var flat_break = 992,
       info_break = $("body").hasClass("has-apps-sidebar") ? 1280 : 1540,
@@ -68,7 +71,10 @@ export default function Messages() {
             profile_hide();
           }
         }
-        if ($(window).outerWidth() >= flat_break && $(window).outerWidth() < info_break) {
+        if (
+          $(window).outerWidth() >= flat_break &&
+          $(window).outerWidth() < info_break
+        ) {
           if ($("body").hasClass("msg-" + shown_profile)) {
             $("body").removeClass("msg-" + shown_profile);
             profile_hide();
@@ -80,16 +86,17 @@ export default function Messages() {
         profile_overlay();
       });
 
-      $("body").ready(function () {
-        msg_on_resize();
-        profile_overlay();
+      router.events.on("routeChangeComplete", () => {
+        if (router.asPath.includes("order")) {
+          msg_on_resize();
+          profile_overlay();
+        }
       });
     });
   }, []);
 
   useLayoutEffect(() => {
     $(function () {
-
       // Messages Variable
       var flat_break = 992,
         info_break = $("body").hasClass("has-apps-sidebar") ? 1280 : 1540,
