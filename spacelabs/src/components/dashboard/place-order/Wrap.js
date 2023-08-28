@@ -1,9 +1,13 @@
 import dynamic from "next/dynamic";
 
+import { useRouter } from 'next/router';
+
 const Header = dynamic(() => import("../Header"), { ssr: false });
 const Footer = dynamic(() => import("../Footer"), { ssr: false });
 
 export default function PlaceOrderWrap() {
+  const router = useRouter();
+
   return (
     <>
       <div className="nk-wrap">
@@ -64,7 +68,11 @@ export default function PlaceOrderWrap() {
                             </h5>
                             <div className="product-price text-primary h5">
                               <a
-                                href="html/order.html"
+                                href="#"
+                                onClick={(e) => {
+                                  e.preventDefault();
+                                  router.push("/dashboard/order")
+                                }}
                                 className="btn btn-outline-success btn-dim btn-block"
                               >
                                 <span>Make a Order</span>{" "}
