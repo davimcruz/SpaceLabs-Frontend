@@ -8,13 +8,7 @@ export default function Messages() {
       $body = $("body");
 
     // Messages Variable
-    var $toggle_info = $(".profile-toggle"),
-      $msg_profile = $(".nk-msg-profile"),
-      $msg_body = $(".nk-msg-body"),
-      $msg_aside = $(".nk-msg-aside"),
-      $msg_item = $(".nk-msg-item"),
-      $msg_hide = $(".nk-msg-hide"),
-      flat_break = 992,
+    var flat_break = 992,
       info_break = $body.hasClass("has-apps-sidebar") ? 1280 : 1540,
       olay_profile = "nk-msg-profile-overlay",
       shown_profile = "profile-shown",
@@ -32,30 +26,30 @@ export default function Messages() {
         }
       }
       function profile_show(inbody) {
-        $toggle_info.addClass("active");
-        $msg_profile.addClass("visible");
-        $msg_body.addClass(shown_profile);
+        $(".profile-toggle").addClass("active");
+        $(".nk-msg-profile").addClass("visible");
+        $(".nk-msg-body").addClass(shown_profile);
         if (inbody === true) $body.addClass("msg-" + shown_profile);
       }
       function profile_hide(inbody) {
-        $toggle_info.removeClass("active");
-        $msg_profile.removeClass("visible");
-        $msg_body.removeClass(shown_profile);
+        $(".profile-toggle").removeClass("active");
+        $(".nk-msg-profile").removeClass("visible");
+        $(".nk-msg-body").removeClass(shown_profile);
         if (inbody === true) $body.removeClass("msg-" + shown_profile);
       }
       function profile_overlay() {
         var overlay = "." + olay_profile;
         if (
           $win.outerWidth() < info_break &&
-          $msg_profile.hasClass("visible")
+          $(".nk-msg-profile").hasClass("visible")
         ) {
-          !$msg_profile.next().hasClass(olay_profile)
-            ? $msg_profile.after('<div class="' + olay_profile + '"></div>')
+          !$(".nk-msg-profile").next().hasClass(olay_profile)
+            ? $(".nk-msg-profile").after('<div class="' + olay_profile + '"></div>')
             : null;
         } else {
           $(overlay).remove();
         }
-        $(overlay).on("click", function () {
+        $("body").on("click", overlay, function () {
           $(this).remove();
           profile_hide(true);
           msg_autohide();
@@ -63,9 +57,9 @@ export default function Messages() {
       }
       function msg_show() {
         $body.on("click", ".nk-msg-item", function (e) {
-          $msg_item.removeClass("current");
-          $msg_aside.addClass(hide_aside);
-          $msg_body.addClass(show_msg);
+          $(".nk-msg-item").removeClass("current");
+          $(".nk-msg-aside").addClass(hide_aside);
+          $(".nk-msg-body").addClass(show_msg);
           $(this).addClass("current");
           e.preventDefault();
         });
@@ -73,16 +67,16 @@ export default function Messages() {
       msg_show();
       function msg_hide() {
         $body.on("click", ".nk-msg-hide", function () {
-          $msg_aside.removeClass(hide_aside);
-          $msg_body.removeClass(show_msg);
+          $(".nk-msg-aside").removeClass(hide_aside);
+          $(".nk-msg-body").removeClass(show_msg);
         });
       }
       msg_hide();
       function profile_trigger() {
         $body.on("click", ".profile-toggle", function (e) {
-          $toggle_info.toggleClass("active");
-          $msg_profile.toggleClass("visible");
-          $msg_body.toggleClass(shown_profile);
+          $(".profile-toggle").toggleClass("active");
+          $(".nk-msg-profile").toggleClass("visible");
+          $(".nk-msg-body").toggleClass(shown_profile);
           if (
             $(this).hasClass("active") &&
             !$body.hasClass("msg-" + shown_profile)
