@@ -1,9 +1,9 @@
-import { useLayoutEffect } from "react";
+import { useEffect } from "react";
 
 import $ from "jquery";
 
 export default function Messages() {
-  useLayoutEffect(() => {
+  useEffect(() => {
     var $win = $(window),
       $body = $("body");
 
