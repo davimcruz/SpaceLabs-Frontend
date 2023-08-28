@@ -62,7 +62,7 @@ export default function Messages() {
         });
       }
       function msg_show() {
-        $msg_item.on("click", function (e) {
+        $body.on("click", $msg_item, function (e) {
           $msg_item.removeClass("current");
           $msg_aside.addClass(hide_aside);
           $msg_body.addClass(show_msg);
@@ -72,14 +72,14 @@ export default function Messages() {
       }
       msg_show();
       function msg_hide() {
-        $msg_hide.on("click", function () {
+        $body.on("click", $msg_hide, function () {
           $msg_aside.removeClass(hide_aside);
           $msg_body.removeClass(show_msg);
         });
       }
       msg_hide();
       function profile_trigger() {
-        $toggle_info.on("click", function (e) {
+        $body.on("click", $toggle_info, function (e) {
           $toggle_info.toggleClass("active");
           $msg_profile.toggleClass("visible");
           $msg_body.toggleClass(shown_profile);
