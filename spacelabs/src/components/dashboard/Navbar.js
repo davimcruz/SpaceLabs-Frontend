@@ -262,14 +262,27 @@ export default function DashboardNavbar() {
                     Management
                   </h6>
                 </li>
+
+
                 <li className="nk-menu-item">
-                  <a href="html/manage-users.html" className="nk-menu-link">
+                  <a 
+                    className="nk-menu-link"
+                    onClick={(e) => {
+                      e.preventDefault();
+
+                      if (router.pathname == "/dashboard/manage-users/") return;
+
+                      router.push("/dashboard/manage-users/");
+                    }}
+                  >
                     <span className="nk-menu-icon">
                       <em className="icon ni ni-user-list-fill" />
                     </span>
                     <span className="nk-menu-text">Manage Users</span>
                   </a>
                 </li>
+
+
                 <li className="nk-menu-item">
                   <a
                     href="https://discord.gg/WQqcrDY8Up"
