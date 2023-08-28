@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -26,26 +27,18 @@ const Header = () => {
           <div className="nk-header-news d-none d-xl-block">
             <div className="nk-news-list">
               <div className="nk-news-list">
-                <a className="nk-news-item" 
-                  href="#"
-                  onClick={(e) => {
-                    e.preventDefault();
-                      if (router.pathname == "/dashboard/terms-of-service")
-                      return;
-
-                      router.push("/dashboard/terms-of-service");
-                  }}
-                >
+              <Link href="/dashboard/terms-of-service">
+                  <a className="nk-news-item">
                   <div className="nk-news-icon">
                     <em className="icon ni ni-quote-left" />
-                  </div>
-                  <div className="nk-news-text">
-                    <h6 style={{ fontSize: 15 }}>
-                      Read the <span className="text-primary">Terms</span> and
-                      avoid being punished by the team.
-                    </h6>
-                  </div>
-                </a>
+                      </div>
+                    <div className="nk-news-text">
+                        <h6 style={{ fontSize: 15 }}>
+                            Read the <span className="text-primary">Terms</span> and avoid being punished by the team.
+                        </h6>
+                     </div>
+                    </a>
+              </Link>
               </div>
             </div>
           </div>
