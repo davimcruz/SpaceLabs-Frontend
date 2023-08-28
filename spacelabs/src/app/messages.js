@@ -80,7 +80,7 @@ export default function Messages() {
         profile_overlay();
       });
 
-      $(window).on("load", function () {
+      $("body").ready(function () {
         msg_on_resize();
         profile_overlay();
       });
