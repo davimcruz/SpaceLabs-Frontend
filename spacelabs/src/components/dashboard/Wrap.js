@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 
 const Header = dynamic(() => import('./Header'), { ssr: false })
 const Footer = dynamic(() => import('./Footer'), { ssr: false })
@@ -128,7 +129,12 @@ export default function DashboardWrap() {
                                   marginTop: "1.8rem",
                                 }}
                               >
-                                <img src="https://visage.surgeplay.com/full/512/9e8a126dbbd245bababc988ca2893b99" />
+                                <Image
+                                  src="https://visage.surgeplay.com/full/512/9e8a126dbbd245bababc988ca2893b99"
+                                  alt="User Skin"
+                                  width={96}
+                                  height={155}
+                                />
                               </div>
                               <div className="user-info">
                                 <h6>Welcome, Maciel</h6>
