@@ -169,7 +169,7 @@ export default function TicketsWrap() {
                                                     <div className="nk-ibx-context-group">
                                                         <div className="nk-ibx-context">
                                                             <span className="nk-ibx-context-text">
-                                                                <span className="heading"><h6 style="font-size: 16px;">Problems with Payment <span className="nk-h6-head" style="font-size: 16px;">#9742</span></h6></span> Recently I've been having some problems with orders. When I click to create an order, nothing happens, just nothing.</span>
+                                                                <span className="heading"><h6 style="font-size: 16px;">Problems with Payment <span className="nk-h6-head" style="font-size: 16px;">#9742</span></h6></span> Recently Ive been having some problems with orders. When I click to create an order, nothing happens, just nothing.</span>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -298,7 +298,7 @@ export default function TicketsWrap() {
                                                         <div className="nk-reply-header nk-ibx-reply-header is-opened">
                                                             <div className="nk-reply-desc">
                                                                 <div className="user-avatar" style="background: none; border-radius: none;">
-                                                                    <img src="file:///C:/Users/POLACO/Documents/KAUE/Websites/CONCLUIDOS/spacelabs.com/images/spacelabs.png" style="border-radius: 0%;"/>
+                                                                    <img src="../../../../public/assets/images/spacelabs.png" style="border-radius: 0%;"/>
                                                                    
                 
                                                                 </div>
