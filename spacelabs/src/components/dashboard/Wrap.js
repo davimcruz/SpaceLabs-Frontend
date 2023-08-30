@@ -128,7 +128,7 @@ export default function DashboardWrap() {
                                   marginTop: "1.8rem",
                                 }}
                               >
-                                <Image src="https://visage.surgeplay.com/full/512/9e8a126dbbd245bababc988ca2893b99" />
+                                <img src="https://visage.surgeplay.com/full/512/9e8a126dbbd245bababc988ca2893b99" />
                               </div>
                               <div className="user-info">
                                 <h6>Welcome, Maciel</h6>
