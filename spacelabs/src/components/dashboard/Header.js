@@ -27,7 +27,7 @@ const Header = () => {
           <div className="nk-header-news d-none d-xl-block">
             <div className="nk-news-list">
               <div className="nk-news-list">
-              <Link href="/dashboard/terms-of-service">
+              <Link href="/dashboard/terms-of-service" legacyBehavior>
                   <a className="nk-news-item">
                   <div className="nk-news-icon">
                     <em className="icon ni ni-quote-left" />
