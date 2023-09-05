@@ -1,7 +1,9 @@
 import React from "react";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const Header = () => {
+  const router = useRouter();
   return (
     <div className="nk-header nk-header-fixed is-light">
       <div className="container-fluid">
@@ -159,13 +161,25 @@ const Header = () => {
                   <div className="dropdown-inner">
                     <ul className="link-list">
                       <li>
-                        <a href="html/account.html">
+                        <a href="#" onClick={(e) => {
+                          e.preventDefault();
+
+                          if(router.pathname == "/dashboard/account") return;
+
+                          router.push("/dashboard/account");
+                        }}>
                           <em className="icon ni ni-user-fill-c" />
                           <span>View my Account</span>
                         </a>
                       </li>
                       <li>
-                        <a href="html/account-security.html">
+                        <a href="#" onClick={(e) => {
+                          e.preventDefault();
+
+                          if(router.pathname == "/dashboard/account/security") return;
+
+                          router.push("/dashboard/account/security")
+                        }}>
                           <em className="icon ni ni-opt-dot-fill" />
                           <span>My Account Settings</span>
                         </a>
